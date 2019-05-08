@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2>New post</h2>
+<form method="POST" class="post-form">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default" id="submit">Save</button>
+</form>
+
+<!-- <script>
+ClassicEditor
+    .create( document.querySelector( '#id_text' ) )
+    .then( id_text => {
+        console.log( id_text );
+    } )
+    .catch( error => {
+        console.error( error );
+    } );  
+</script> -->
+
+{% endblock %}
